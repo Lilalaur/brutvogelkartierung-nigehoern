@@ -119,7 +119,7 @@ L.control.scale().addTo(map);
 
 
 //Begrüßungsnachricht
-//alert("Hey Kompaktseminarteilnehmer, viel Spaß beim birdwatching! :)");
+alert("Hey Kompaktseminarteilnehmer, viel Spaß beim birdwatching! :)");
 
 
 
