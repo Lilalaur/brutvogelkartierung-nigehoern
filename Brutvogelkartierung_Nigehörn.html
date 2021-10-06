@@ -1,0 +1,44 @@
+<html>
+    <head>
+		<meta name="author" content="Laura Linhart" />
+		<meta name="description" content="Brutvogelkartierung Nigehörn" />
+		<meta charset="utf-8" />
+		<title> Brutvogelkartierung Nigehörn </title> 
+		
+		<!-- IMPORT ALLER STYLESHEETS --> 
+		<!-- Link zu Stylesheet-->
+		<link rel="stylesheet" href="css/style.css">
+		
+		<!-- Link zum Leaflet Stylesheet-->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"/>
+		
+		<!-- IMPORT ALLER JS FILES -->
+		<!-- Link zur leaflet javascript library-->
+		<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+		
+		
+		
+		
+    </head>
+    <body>
+		<div> <h1>Brutvogelkartierung Nigehörn</h1> </div>
+		
+		<div class="pagewrapper"> 
+			
+			<div id="mapandlegend">
+				<div id="legend">
+					<h2>Legende</h2>
+					<div id="Art" ><p class="legendtypes">Vogelart</p></div>
+				</div>
+				 
+				<div id="map"></div> 
+				
+				<div id="Zeitstrahl">
+					<img src="pics/timeline.png" class="timeline" alt="timeline">
+				</div>
+			</div>
+			 
+		</div>
+		<script src="js/main.js"></script>
+    </body>
+</html>
