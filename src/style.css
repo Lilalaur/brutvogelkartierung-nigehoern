@@ -6,6 +6,16 @@ html, body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* TODO: Remove me after development */
+[data-year]::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: red;
+  font-weight: bold;
+  content: attr(data-year);
+}
+
 h1 {
   font-size: 24pt;
   font-weight: bold;
