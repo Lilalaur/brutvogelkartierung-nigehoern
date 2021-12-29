@@ -2,7 +2,7 @@ import { SPECIES } from "./config";
 
 /** Dynamically loading/importing the GeoJSON data from its static file */
 const loadGeoJSONData = async () => {
-  const data = await import("@/assets/TestData.json");
+  const data = await import("@/assets/BK_NG_Gesamt.json");
   return data;
 };
 
