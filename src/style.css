@@ -1,96 +1,62 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* TODO: Remove me after development */
-[data-year]::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: red;
-  font-weight: bold;
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+/* TODO: Remove me */
+[data-year]::after {
+  display: inline-block;
+  margin: 0;
   content: attr(data-year);
 }
 
 h1 {
-  font-size: 24pt;
+  font-size: 2rem;
   font-weight: bold;
   left: 5px;
-  height: 7%;
-  bottom: 0px;
-  margin:0;
+  margin: 0;
 }
 
 h2 {
-  font-size: 14pt;
+  font-size: 1.65rem;
   font-weight: bold;
 }
 
-.pagewrapper {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+h3 {
+  font-size: 1.45rem;
+  font-weight: bold;
 }
 
-#mapandlegend {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+.header {
   display: flex;
-  height: 93%;
-  position: relative;
-}
-
-#legend {
-  width: 10%;
-  margin-top: 7px;
-  background-color: #FFFFFF;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px;
-  position: absolute;
-  z-index: 2;
-  height: 75%;
-  right: 7px;
-  border-radius: 4px;
-  box-shadow: 0 0 0px 3px #00000026;
+  height: 5vh;
 }
 
-.legendtypes {
-	margin-left: 17px;
-}
-
-#Art {
-	width: 12px;
-	background-color: cornflowerblue;
-	border-radius: 15px;
-}
-
-#map {
-  width: 100%;
-  z-index: 1;
-  height: 100%;
-}
-
-#Zeitstrahl {
-	position: absolute;
-	z-index: 2;
-	right: 0;
-	bottom: 5px;
-	left: 0;
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.olControlAttribution {
-	display: none; !important
-}
-
-.timeline {
-	display: block;
-	width: 100%;
-	height: auto;
+.header__text,
+.header__text::before {
+  font-size: 1.75rem;
+  font-weight: normal;
+  font-variant-numeric: tabular-nums;
+  font-family: monospace;
 }

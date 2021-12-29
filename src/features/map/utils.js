@@ -1,3 +1,22 @@
-import { randomInteger } from "@/utils";
+import { SPECIES } from "./config";
 
-export const randomDensity = () => randomInteger(0, 1000);
+/** Dynamically loading/importing the GeoJSON data from its static file */
+const loadGeoJSONData = async () => {
+  const data = await import("@/assets/TestData.json");
+  return data;
+};
+
+const getAvailableYears = (data) => {
+  const availableYears = new Set();
+  data?.features.forEach(({ properties }) => {
+    availableYears.add(Number(properties.Jahr));
+  });
+  return availableYears;
+};
+
+const getSpeciesColor = (acronym) => {
+  const color = SPECIES[acronym]?.color ?? "gray";
+  return color;
+};
+
+export { loadGeoJSONData, getAvailableYears, getSpeciesColor };
