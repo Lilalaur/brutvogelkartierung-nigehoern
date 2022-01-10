@@ -1,5 +1,5 @@
 import { store } from "../store";
-import { getSpeciesColor } from "../utils";
+import { getSpeciesColor, getSpeciesShape } from "../utils";
 import "./legend.css";
 
 function registerLegend(map) {
@@ -23,8 +23,6 @@ function createControl() {
 
 function createContainerElement() {
   const containerElement = L.DomUtil.create("div", "legend leaflet-bar");
-  const headingEl = L.DomUtil.create("h3", "legend__heading", containerElement);
-  headingEl.textContent = "Legende: Vogelarten";
   const bodyElement = L.DomUtil.create("div", "legend__body", containerElement);
   const render = (cb) => {
     bodyElement.innerHTML = "";
@@ -76,7 +74,8 @@ function createHTMLSpeciesMarker(acronym) {
     `legend-icon legend-icon--${acronym}`
   );
   element.style.setProperty("--color-legend-icon", getSpeciesColor(acronym));
-  L.DomUtil.create("div", undefined, element);
+  element.style.setProperty("--shape-legend-icon", getSpeciesShape(acronym));
+  // L.DomUtil.create("div", undefined, element);
   return element;
 }
 

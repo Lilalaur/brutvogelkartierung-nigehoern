@@ -40,3 +40,16 @@ export const SpeciesAcronyms = {
   Zs: "Zs",
   Zz: "Zz",
 };
+
+export const SpeciesShapes = {
+  /** Circle */
+  0: "circle(50% at 50% 50%)",
+  /** Triangle */
+  1: "polygon(50% 0%, 0% 100%, 100% 100%)",
+  /** Square */
+  2: "inset(5% 20% 15% 10%)",
+  /** Rhombus/ Raute */
+  3: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
+  /** Pentagon */
+  4: "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)",
+};

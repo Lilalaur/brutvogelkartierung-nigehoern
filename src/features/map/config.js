@@ -1,129 +1,161 @@
-import { SpeciesAcronyms } from "./types";
-
-const randomColor = () => {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, "0")
-    .toUpperCase()}`;
-};
+import { SpeciesAcronyms, SpeciesShapes } from "./types";
 
 const SPECIES = {
   [SpeciesAcronyms.Af]: {
-    color: randomColor(),
+    color: "#fb9a99",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Bg]: {
-    color: randomColor(),
+    color: "#b2df8a",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Bh]: {
-    color: randomColor(),
+    color: "#ffff99",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Br]: {
-    color: randomColor(),
+    color: "#fdbf6f",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Bs]: {
-    color: randomColor(),
+    color: "#e539d3",
+    clipPath: SpeciesShapes[1],
   },
   [SpeciesAcronyms.Dm]: {
-    color: randomColor(),
+    color: "#ff96f4",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Ee]: {
-    color: randomColor(),
+    color: "#a6cee3",
+    clipPath: SpeciesShapes[1],
   },
   [SpeciesAcronyms.Fi]: {
-    color: randomColor(),
+    color: "#d8d80e",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Fl]: {
-    color: randomColor(),
+    color: "#ff7f00",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Fs]: {
-    color: randomColor(),
+    color: "#fdbf6f",
+    clipPath: SpeciesShapes[1],
   },
   [SpeciesAcronyms.Gg]: {
-    color: randomColor(),
+    color: "#7d7d14",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Gm]: {
-    color: randomColor(),
+    color: "#ff96f4",
+    clipPath: SpeciesShapes[1],
   },
   [SpeciesAcronyms.Hm]: {
-    color: randomColor(),
+    color: "#824101",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Kg]: {
-    color: randomColor(),
+    color: "#ff96f4",
+    clipPath: SpeciesShapes[2],
   },
   [SpeciesAcronyms.Ko]: {
-    color: randomColor(),
+    color: "#1f78b4",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Ks]: {
-    color: randomColor(),
+    color: "#fdbf6f",
+    clipPath: SpeciesShapes[2],
   },
   [SpeciesAcronyms.Lm]: {
-    color: randomColor(),
+    color: "#824101",
+    clipPath: SpeciesShapes[1],
   },
   [SpeciesAcronyms.Lö]: {
-    color: randomColor(),
+    color: "#3f2758",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Mg]: {
-    color: randomColor(),
+    color: "#ff96f4",
+    clipPath: SpeciesShapes[3],
   },
   [SpeciesAcronyms.Mm]: {
-    color: randomColor(),
+    color: "#824101",
+    clipPath: SpeciesShapes[2],
   },
   [SpeciesAcronyms.Ng]: {
-    color: randomColor(),
+    color: "#b2df8a",
+    clipPath: SpeciesShapes[1],
   },
   [SpeciesAcronyms.Ra]: {
-    color: randomColor(),
+    color: "#e31a1c",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Ri]: {
-    color: randomColor(),
+    color: "#6a3d9a",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Rk]: {
-    color: randomColor(),
+    color: "#2eecaf",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Ro]: {
-    color: randomColor(),
+    color: "#24506e",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Rs]: {
-    color: randomColor(),
+    color: "#cab2d6",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Sa]: {
-    color: randomColor(),
+    color: "#841516",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Sd]: {
-    color: randomColor(),
+    color: "#1e6219",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Se]: {
-    color: randomColor(),
+    color: "#841516",
+    clipPath: SpeciesShapes[1],
   },
   [SpeciesAcronyms.Si]: {
-    color: "#cab2d6",
+    color: "#824101",
+    clipPath: SpeciesShapes[3],
   },
   [SpeciesAcronyms.Sm]: {
-    color: randomColor(),
+    color: "#824101",
+    clipPath: SpeciesShapes[4],
   },
   [SpeciesAcronyms.Sr]: {
-    color: randomColor(),
+    color: "#33a02c",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.St]: {
-    color: randomColor(),
+    color: "#a6cee3",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Su]: {
-    color: randomColor(),
+    color: "#a9fae0",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Wf]: {
-    color: randomColor(),
+    color: "#941a88",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Wp]: {
-    color: randomColor(),
+    color: "#e539d3",
+    clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Ww]: {
-    color: randomColor(),
+    color: "#7d7d14",
+    clipPath: SpeciesShapes[1],
   },
   [SpeciesAcronyms.Zs]: {
-    color: randomColor(),
+    color: "#fdbf6f",
+    clipPath: SpeciesShapes[3],
   },
   [SpeciesAcronyms.Zz]: {
-    color: randomColor(),
+    color: "#d8d80e",
+    clipPath: SpeciesShapes[1],
   },
 };
 

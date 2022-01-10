@@ -69,8 +69,8 @@ const tileLayerOptions = {
   attribution:
     '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   detectRetina: true,
-  maxZoom: 18,
-  minZoom: 14,
+  maxZoom: 18,   //in die Nähe
+  minZoom: 12,   //in die Ferne
 };
 
 function createTileLayer() {

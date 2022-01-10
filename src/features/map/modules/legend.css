@@ -1,17 +1,14 @@
+.leaflet-top.leaflet-right {
+  height: 100%;
+}
+
 .legend {
   padding: 1rem;
   min-width: 240px;
   max-width: 320px;
+  max-height: 90%;
+  overflow-y: scroll;
   background-color: #ffffff;
-}
-
-.legend__heading {
-  font-size: 1rem;
-  margin: 0;
-}
-
-.legend__body {
-  margin-top: 1rem;
 }
 
 .legend__list {
@@ -58,16 +55,18 @@
 
 .legend-icon {
   flex: 1 1 auto;
-  /* clip-path: circle(); */
   display: flex;
-  border-radius: 100%;
-  border: 2px solid var(--color-legend-icon, gray);
+  background-color: var(--color-legend-icon, gray);
+  clip-path: var(--shape-legend-icon, circle(50% at 50% 50%));
 }
 
 .legend-icon > div {
   flex: 1 1 auto;
+  /*
   background-color: var(--color-legend-icon, gray);
   opacity: 0.4;
+  */
+  clip-path: var(--shape-legend-icon, circle(50% at 50% 50%));
 }
 
 .legend-icon > svg {
