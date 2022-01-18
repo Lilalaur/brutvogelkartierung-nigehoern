@@ -1,4 +1,4 @@
-import { SPECIES } from "./config";
+import { SPECIES } from "./Signaturen";
 import { SpeciesShapes } from "./types";
 
 /** Dynamically loading/importing the GeoJSON data from its static file */

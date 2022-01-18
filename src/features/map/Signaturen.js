@@ -6,7 +6,7 @@ const SPECIES = {
     clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Bg]: {
-    color: "#b2df8a",
+    color: "#1e6219",
     clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Bh]: {
@@ -34,7 +34,7 @@ const SPECIES = {
     clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Fl]: {
-    color: "#ff7f00",
+    color: "#fdbf6f",
     clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Fs]: {
@@ -50,7 +50,7 @@ const SPECIES = {
     clipPath: SpeciesShapes[1],
   },
   [SpeciesAcronyms.Hm]: {
-    color: "#824101",
+    color: "#FFE6CD",
     clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Kg]: {
@@ -82,11 +82,11 @@ const SPECIES = {
     clipPath: SpeciesShapes[2],
   },
   [SpeciesAcronyms.Ng]: {
-    color: "#b2df8a",
+    color: "#1e6219",
     clipPath: SpeciesShapes[1],
   },
   [SpeciesAcronyms.Ra]: {
-    color: "#e31a1c",
+    color: "#841516",
     clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Ri]: {
@@ -106,19 +106,19 @@ const SPECIES = {
     clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Sa]: {
-    color: "#841516",
+    color: "#e31a1c",
     clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Sd]: {
-    color: "#1e6219",
+    color: "#93E288",
     clipPath: SpeciesShapes[0],
   },
   [SpeciesAcronyms.Se]: {
-    color: "#841516",
+    color: "#e31a1c",
     clipPath: SpeciesShapes[1],
   },
   [SpeciesAcronyms.Si]: {
-    color: "#824101",
+    color: "#FFE6CD",
     clipPath: SpeciesShapes[3],
   },
   [SpeciesAcronyms.Sm]: {

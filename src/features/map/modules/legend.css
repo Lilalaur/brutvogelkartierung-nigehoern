@@ -25,7 +25,6 @@
   display: flex;
   width: 0.75rem;
   height: 0.75rem;
-  /* border: 2px solid black; */
 }
 
 .legend-item__icon > .legend-icon {
@@ -50,7 +49,6 @@
 
 .legend-icon-wrapper {
   display: flex;
-  /* filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45)); */
 }
 
 .legend-icon {
@@ -62,63 +60,5 @@
 
 .legend-icon > div {
   flex: 1 1 auto;
-  /*
-  background-color: var(--color-legend-icon, gray);
-  opacity: 0.4;
-  */
   clip-path: var(--shape-legend-icon, circle(50% at 50% 50%));
 }
-
-.legend-icon > svg {
-  /* fill: var(--color-legend-icon, gray);
-  fill-opacity: 0.2;
-  stroke: var(--color-legend-icon, gray); */
-}
-
-/* --- duplicated color below --- */
-
-/* .legend-icon--Weißwangengans,
-.legend-icon--Ww {
-  background-color: #a6cee3;
-  clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
-}
-.legend-icon--Brandgans,
-.legend-icon--Bg {
-  background-color: #1f78b4;
-  clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
-}
-.legend-icon--Bachstelze,
-.legend-icon--Bs {
-  background-color: #b2df8a;
-  clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
-}
-.legend-icon--Rotkehlchen,
-.legend-icon--Ro {
-  background-color: #33a02c;
-  clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
-}
-.legend-icon--Ringeltaube,
-.legend-icon--Ri {
-  background-color: #fb9a99;
-  clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
-}
-.legend-icon--Löffler,
-.legend-icon--Lö {
-  background-color: #e31a1c;
-  clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
-}
-.legend-icon--Kormoran,
-.legend-icon--Ko {
-  background-color: #fdbf6f;
-  clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
-}
-.legend-icon--Heringsmöwe,
-.legend-icon--Hm {
-  background-color: #ff7f00;
-  clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
-}
-.legend-icon--Silbermöwe,
-.legend-icon--Si {
-  background-color: #cab2d6;
-  clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
-} */

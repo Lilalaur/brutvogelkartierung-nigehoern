@@ -69,12 +69,19 @@ function createListItems(items) {
 }
 
 function createHTMLSpeciesMarker(acronym) {
+  const trimmedAcronym = acronym.trim();
   const element = L.DomUtil.create(
     "div",
-    `legend-icon legend-icon--${acronym}`
+    `legend-icon legend-icon--${trimmedAcronym}`
   );
-  element.style.setProperty("--color-legend-icon", getSpeciesColor(acronym));
-  element.style.setProperty("--shape-legend-icon", getSpeciesShape(acronym));
+  element.style.setProperty(
+    "--color-legend-icon",
+    getSpeciesColor(trimmedAcronym)
+  );
+  element.style.setProperty(
+    "--shape-legend-icon",
+    getSpeciesShape(trimmedAcronym)
+  );
   // L.DomUtil.create("div", undefined, element);
   return element;
 }
