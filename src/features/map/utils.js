@@ -1,5 +1,4 @@
-import { SPECIES } from "./Signaturen";
-import { SpeciesShapes } from "./types";
+import { SPECIES, SpeciesIcons } from "./Signaturen";
 
 /** Dynamically loading/importing the GeoJSON data from its static file */
 const loadGeoJSONData = async () => {
@@ -20,9 +19,9 @@ const getSpeciesColor = (acronym) => {
   return color;
 };
 
-const getSpeciesShape = (acronym) => {
-  const color = SPECIES[acronym]?.clipPath ?? SpeciesShapes[0];
-  return color;
+const getSpeciesIcon = (acronym) => {
+  const icon = SPECIES[acronym]?.icon ?? SpeciesIcons.Circle;
+  return icon;
 };
 
-export { loadGeoJSONData, getAvailableYears, getSpeciesColor, getSpeciesShape };
+export { loadGeoJSONData, getAvailableYears, getSpeciesColor, getSpeciesIcon };

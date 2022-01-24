@@ -1,5 +1,5 @@
 import { store } from "../store";
-import { getSpeciesColor, getSpeciesShape } from "../utils";
+import { getSpeciesColor, getSpeciesIcon } from "../utils";
 import "./legend.css";
 
 function registerLegend(map) {
@@ -74,15 +74,11 @@ function createHTMLSpeciesMarker(acronym) {
     "div",
     `legend-icon legend-icon--${trimmedAcronym}`
   );
+  element.insertAdjacentHTML("afterbegin", getSpeciesIcon(trimmedAcronym));
   element.style.setProperty(
     "--color-legend-icon",
     getSpeciesColor(trimmedAcronym)
   );
-  element.style.setProperty(
-    "--shape-legend-icon",
-    getSpeciesShape(trimmedAcronym)
-  );
-  // L.DomUtil.create("div", undefined, element);
   return element;
 }
 
