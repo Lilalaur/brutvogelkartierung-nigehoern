@@ -1,0 +1,8 @@
+i.fa.fa-info-circle::before {
+  display: block;
+  content: "i";
+  font-family: sans-serif;
+  color: grey;
+  font-style: normal;
+  font-weight: bold;
+}

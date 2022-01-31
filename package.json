@@ -16,6 +16,8 @@
     "parcel": "2.0.1"
   },
   "dependencies": {
-    "leaflet": "1.7.1"
+    "leaflet": "1.7.1",
+    "leaflet-easybutton": "^2.4.0",
+    "leaflet.infobutton": "^1.2.0"
   }
 }
