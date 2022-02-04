@@ -64,7 +64,7 @@ const SPECIES = {
     icon: SpeciesIcons.Triangle,
   },
   [SpeciesAcronyms.Hm]: {
-    color: "#FFE6CD",
+    color: "#A5A391",
     icon: SpeciesIcons.Circle,
   },
   [SpeciesAcronyms.Kg]: {
