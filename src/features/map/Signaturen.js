@@ -10,7 +10,7 @@ const SPECIES = {
     icon: SpeciesIcons.Circle,
   },
   [SpeciesAcronyms.Bh]: {
-    color: "#ffff99",
+    color: "#d8d80e",
     icon: SpeciesIcons.Circle,
   },
   [SpeciesAcronyms.Br]: {
@@ -30,7 +30,7 @@ const SPECIES = {
     icon: SpeciesIcons.Triangle,
   },
   [SpeciesAcronyms.Fi]: {
-    color: "#d8d80e",
+    color: "#ffff99",
     icon: SpeciesIcons.Circle,
   },
   [SpeciesAcronyms.Fl]: {
@@ -38,7 +38,7 @@ const SPECIES = {
     icon: SpeciesIcons.Circle,
   },
   [SpeciesAcronyms.Fs]: {
-    color: "#fdbf6f",
+    color: "#ffff99",
     icon: SpeciesIcons.Rectangle,
   },
   [SpeciesAcronyms.Gg]: {
@@ -62,7 +62,7 @@ const SPECIES = {
     icon: SpeciesIcons.Rectangle,
   },
   [SpeciesAcronyms.Ks]: {
-    color: "#fdbf6f",
+    color: "#8655BB",
     icon: SpeciesIcons.Rectangle,
   },
   [SpeciesAcronyms.Lm]: {
@@ -154,7 +154,7 @@ const SPECIES = {
     icon: SpeciesIcons.Rectangle,
   },
   [SpeciesAcronyms.Zz]: {
-    color: "#d8d80e",
+    color: "#ffff99",
     icon: SpeciesIcons.Triangle,
   },
 };

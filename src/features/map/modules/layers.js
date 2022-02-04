@@ -67,7 +67,7 @@ async function createGeoJSONLayer(update = clearAndUpdateLayer) {
 const urlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 const tileLayerOptions = {
   attribution:
-    '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> | © Laura Linhart',
   detectRetina: true,
   maxZoom: 18, //in die Nähe
   minZoom: 12, //in die Ferne
