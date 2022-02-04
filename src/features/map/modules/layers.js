@@ -28,7 +28,7 @@ const geoJSONLayerOptions = {
     return L.marker(latlng, {
       icon: L.divIcon({
         className: `legend-icon-wrapper`,
-        iconSize: [20, 20],
+        iconSize: [24, 24],
         html: createHTMLSpeciesMarker(geoJsonPoint.properties.ArtAbk),
       }),
     });

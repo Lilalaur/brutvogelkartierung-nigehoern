@@ -1,18 +1,4 @@
-import { SpeciesAcronyms } from "./types";
-import CircleSVG from "bundle-text:./assets/icons/Circle.svg";
-import TriangleSVG from "bundle-text:./assets/icons/Triangle.svg";
-import SquareSVG from "bundle-text:./assets/icons/Square.svg";
-import RhombusSVG from "bundle-text:./assets/icons/Rhombus.svg";
-import PentagonSVG from "bundle-text:./assets/icons/Pentagon.svg";
-
-/** @enum {string} */
-const SpeciesIcons = {
-  Circle: CircleSVG,
-  Triangle: TriangleSVG,
-  Square: SquareSVG,
-  Rhombus: RhombusSVG,
-  Pentagon: PentagonSVG,
-};
+import { SpeciesAcronyms, SpeciesIcons } from "./constants";
 
 const SPECIES = {
   [SpeciesAcronyms.Af]: {
@@ -53,7 +39,7 @@ const SPECIES = {
   },
   [SpeciesAcronyms.Fs]: {
     color: "#fdbf6f",
-    icon: SpeciesIcons.Triangle,
+    icon: SpeciesIcons.Rectangle,
   },
   [SpeciesAcronyms.Gg]: {
     color: "#7d7d14",

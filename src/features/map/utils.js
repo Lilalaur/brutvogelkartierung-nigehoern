@@ -1,4 +1,5 @@
-import { SPECIES, SpeciesIcons } from "./Signaturen";
+import { SPECIES } from "./Signaturen";
+import { SpeciesIcons } from "./constants";
 
 /** Dynamically loading/importing the GeoJSON data from its static file */
 const loadGeoJSONData = async () => {

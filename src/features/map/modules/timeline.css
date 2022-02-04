@@ -1,0 +1,31 @@
+.leaflet-bottom.leaflet-right {
+  width: 100%;
+}
+
+.timeline.leaflet-control {
+  margin: 0 auto;
+  float: none;
+}
+
+.timeline {
+  max-width: 1200px;
+}
+
+.timeline input {
+  width: 100%;
+}
+
+.timeline datalist {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -0.65em;
+  margin-right: -0.85em;
+  font-size: 10px;
+}
+
+.timeline option {
+  flex: 0 0 3em;
+  text-align: center;
+  font-family: monospace;
+  font-variant-numeric: tabular-nums;
+}
