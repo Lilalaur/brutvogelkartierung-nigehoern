@@ -85,7 +85,7 @@ function handleEachFeature(feature, layer) {
   const { geometry, properties } = feature;
   if (geometry.type === "Point") {
     layer.bindPopup(properties.Art);
-  } else if (geometry.type === "Polygon") {
+  } else if (geometry.type === "Polygon" || geometry.type === "MultiPolygon") {
     layer.bindPopup(
       `Kolonie: ${properties.Art} <br/> Anzahl: ${properties.Anzahl} Brutpaare`
     );
