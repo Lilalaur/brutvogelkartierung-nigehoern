@@ -136,7 +136,7 @@ const SPECIES = {
     icon: SpeciesIcons.Rhombus,
   },
   [SpeciesAcronyms.Sm]: {
-    color: "#824101",
+    color: "#24506e",
     icon: SpeciesIcons.Pentagon,
   },
   [SpeciesAcronyms.Sr]: {
