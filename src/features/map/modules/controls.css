@@ -1,0 +1,30 @@
+i.fa.fa-info-circle::before {
+  display: block;
+  content: "i";
+  font-family: sans-serif;
+  color: grey;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.info-layer-logos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}
+
+.info-layer {
+  font-size: 18px;
+}
+
+.info-layer-logos .logo {
+  display: block;
+  max-width: 80%;
+  height: auto;
+}
+
+.info-layer-logos .logo.Jordi {
+  max-width: 60%;
+}

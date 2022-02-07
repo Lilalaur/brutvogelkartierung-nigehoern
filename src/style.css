@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+/* TODO: Remove me */
+[data-year]::after {
+  display: inline-block;
+  margin: 0;
+  content: attr(data-year);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  left: 5px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.65rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.45rem;
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  height: 5vh;
+}
+
+.header__text,
+.header__text::before {
+  font-size: 1.75rem;
+  font-weight: normal;
+  font-variant-numeric: tabular-nums;
+  font-family: monospace;
+}
