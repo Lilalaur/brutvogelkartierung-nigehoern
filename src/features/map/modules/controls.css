@@ -1,10 +1,7 @@
-i.fa.fa-info-circle::before {
-  display: block;
-  content: "i";
-  font-family: sans-serif;
-  color: grey;
-  font-style: normal;
-  font-weight: bold;
+@import "../../../lib/Leaflet.infoButton/leaflet.infoButton.css";
+
+.leaflet-infoWindow-container {
+  font-family: inherit;
 }
 
 .info-layer-logos {
@@ -16,7 +13,11 @@ i.fa.fa-info-circle::before {
 }
 
 .info-layer {
-  font-size: 18px;
+  font-size: 17px;
+}
+
+.leaflet-infoWindow .leaflet-content {
+  padding-top: 2em;
 }
 
 .info-layer-logos .logo {

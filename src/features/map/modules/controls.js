@@ -1,10 +1,10 @@
 import { registerLegendControl } from "./legend";
 import { registerTimelineControl } from "./timeline";
 import * as L from "leaflet";
-import "leaflet.infoButton";
 import "./controls.css";
 import logoJordsand from "../../../assets/pics/Logo_Jordsand.png";
 import logoNPHW from "../../../assets/pics/Logo_NPHW.png";
+import "../../../lib/Leaflet.infoButton/leaflet.infoButton";
 
 /** Register all custom Leaflet controls at once */
 function registerMapControls(map) {
@@ -13,7 +13,7 @@ function registerMapControls(map) {
   L.control.scale({ imperial: false }).addTo(map); //metrischer Maßstabsbalken
   L.control
     .infoButton({
-      buttonTittle: "Datenherkunft",
+      linkTitle: "Datenherkunft",
       title: "<h1>Datenherkunft</h1>",
       position: "topleft",
       html: `
