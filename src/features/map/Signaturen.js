@@ -14,7 +14,7 @@ const SPECIES = {
     icon: SpeciesIcons.Circle,
   },
   [SpeciesAcronyms.Br]: {
-    color: "#fdbf6f",
+    color: "#412601",
     icon: SpeciesIcons.Rectangle,
   },
   [SpeciesAcronyms.Bs]: {
