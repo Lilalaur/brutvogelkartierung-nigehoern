@@ -4,6 +4,14 @@
       "name": "preset-default",
       "params": {
         "overrides": {
+          "cleanupNumericValues": false,
+          "convertEllipseToCircle": false,
+          "convertPathData": false,
+          "convertShapeToPath": false,
+          "MergePaths": false,
+          "removeDesc": false,
+          "removeTitle": false,
+
           "removeUselessStrokeAndFill": false,
           "removeViewBox": false
         }
