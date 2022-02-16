@@ -1,37 +1,37 @@
 import { store } from "./store";
-import {
-  registerGeoJSONLayer,
-  registerMapControls,
-  registerMapWithTileLayer,
-} from "./modules";
+import { registerMapControls, registerMapLayers } from "./features";
 import "./map.css";
 
-/**
- * Main function for running the whole Leaflet map.
- * Register all the required parts and some configuration.
- *
- * @example mapWithTimeline(document.getElementById('myElement'))
- */
-async function mapWithTimeline(element, options = {}) {
-  const map = registerMapWithTileLayer(element);
-  await registerGeoJSONLayer(map);
-  registerMapControls(map);
-
-  map.whenReady((event) => {
-    const { whenReady } = options;
-    if (typeof whenReady === "function") {
-      whenReady(event);
-    }
+function registerMap(element) {
+  const map = L.map(element, {
+    zoom: 15,
+    center: [53.9491, 8.42856],
+    attributionControl: false,
   });
-
-  store.subscribe(({ target, prop }) => {
-    const { onStateChange } = options;
-    if (typeof onStateChange === "function") {
-      onStateChange(target, prop);
-    }
-  });
-
   return map;
 }
 
-export { mapWithTimeline };
+function registerYearIndicator() {
+  const element = document.querySelector("[data-year]");
+
+  function update() {
+    element.setAttribute("data-year", store.getState().year);
+  }
+
+  store.subscribe(({ prop }) => {
+    if (prop === "year") {
+      update();
+    }
+  });
+
+  update();
+}
+
+async function initializeMapWithTimeline(element) {
+  const map = registerMap(element);
+  await registerMapLayers(map);
+  registerMapControls(map);
+  registerYearIndicator();
+}
+
+export { initializeMapWithTimeline };

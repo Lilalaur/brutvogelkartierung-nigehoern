@@ -21,7 +21,6 @@ body {
   font-size: 1rem;
 }
 
-/* TODO: Remove me */
 [data-year]::after {
   display: inline-block;
   margin: 0;

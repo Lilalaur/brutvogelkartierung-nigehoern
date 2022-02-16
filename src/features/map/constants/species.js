@@ -1,12 +1,12 @@
-import CircleSVG from "bundle-text:./assets/icons/Circle.svg";
-import TriangleSVG from "bundle-text:./assets/icons/Triangle.svg";
-import SquareSVG from "bundle-text:./assets/icons/Square.svg";
-import RhombusSVG from "bundle-text:./assets/icons/Rhombus.svg";
-import PentagonSVG from "bundle-text:./assets/icons/Pentagon.svg";
-import RectangleSVG from "bundle-text:./assets/icons/Rectangle.svg";
+import CircleSVG from "bundle-text:../assets/icons/Circle.svg";
+import TriangleSVG from "bundle-text:../assets/icons/Triangle.svg";
+import SquareSVG from "bundle-text:../assets/icons/Square.svg";
+import RhombusSVG from "bundle-text:../assets/icons/Rhombus.svg";
+import PentagonSVG from "bundle-text:../assets/icons/Pentagon.svg";
+import RectangleSVG from "bundle-text:../assets/icons/Rectangle.svg";
 
 /** @enum {string} */
-export const SpeciesIcons = {
+const SpeciesIcons = {
   Circle: CircleSVG,
   Triangle: TriangleSVG,
   Square: SquareSVG,
@@ -16,7 +16,7 @@ export const SpeciesIcons = {
 };
 
 /** @enum {string} */
-export const SpeciesAcronyms = {
+const SpeciesAcronyms = {
   Af: "Af",
   Bg: "Bg",
   Bh: "Bh",
@@ -57,3 +57,5 @@ export const SpeciesAcronyms = {
   Zs: "Zs",
   Zz: "Zz",
 };
+
+export { SpeciesIcons, SpeciesAcronyms };

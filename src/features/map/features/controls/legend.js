@@ -1,15 +1,18 @@
-import { store } from "../store";
-import { getSpeciesColor, getSpeciesIcon } from "../utils";
+import { store } from "../../store";
+import { createHTMLSpeciesMarker } from "../../utils";
 import "./legend.css";
 
-function registerLegend(map) {
+/**
+ * @param {import('leaflet').Map} map
+ */
+function registerLegendControl(map) {
   const control = createControl();
   control.setPosition("topright");
   control.addTo(map);
 }
 
 function createControl() {
-  const control = L.control();
+  const control = new L.Control();
   const [element, renderBody] = createContainerElement();
   control.onAdd = () => element;
   renderBody(createList);
@@ -21,13 +24,19 @@ function createControl() {
   return control;
 }
 
+/**
+ * @returns {[HTMLElement, (cb: () => HTMLElement) => void]}
+ */
 function createContainerElement() {
   const containerElement = L.DomUtil.create("div", "legend leaflet-bar");
   const bodyElement = L.DomUtil.create("div", "legend__body", containerElement);
+
+  /** @param {() => HTMLElement} cb  */
   const render = (cb) => {
     bodyElement.innerHTML = "";
     bodyElement.appendChild(cb());
   };
+
   L.DomEvent.disableClickPropagation(containerElement);
   return [containerElement, render];
 }
@@ -52,34 +61,20 @@ function createList() {
 function createListItems(items) {
   const fragment = document.createDocumentFragment();
 
-  Object.entries(items).forEach(([acronym, species]) => {
+  Object.entries(items).map(([acronym, species]) => {
     const element = L.DomUtil.create(
       "li",
-      `legend-item legend-item--${acronym}`,
-      fragment
+      `legend-item legend-item--${acronym}`
     );
     const iconContainer = L.DomUtil.create("div", "legend-item__icon", element);
     const iconElement = createHTMLSpeciesMarker(acronym);
     iconContainer.appendChild(iconElement);
     const nameElement = L.DomUtil.create("div", "legend-item__name", element);
     nameElement.innerText = species;
+    fragment.appendChild(element);
   });
 
   return fragment;
-}
-
-function createHTMLSpeciesMarker(acronym) {
-  const trimmedAcronym = acronym.trim();
-  const element = L.DomUtil.create(
-    "div",
-    `legend-icon legend-icon--${trimmedAcronym}`
-  );
-  element.insertAdjacentHTML("afterbegin", getSpeciesIcon(trimmedAcronym));
-  element.style.setProperty(
-    "--color-legend-icon",
-    getSpeciesColor(trimmedAcronym)
-  );
-  return element;
 }
 
 // -------- utilities
@@ -111,4 +106,4 @@ function getSpecies(features) {
   return Object.fromEntries(map);
 }
 
-export { registerLegend as registerLegendControl, createHTMLSpeciesMarker };
+export { registerLegendControl };

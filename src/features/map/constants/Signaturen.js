@@ -1,6 +1,6 @@
-import { SpeciesAcronyms, SpeciesIcons } from "./constants";
+import { SpeciesAcronyms, SpeciesIcons } from "./species";
 
-const SPECIES = {
+const Species = {
   [SpeciesAcronyms.Af]: {
     color: "#fb9a99",
     icon: SpeciesIcons.Circle,
@@ -159,4 +159,4 @@ const SPECIES = {
   },
 };
 
-export { SPECIES, SpeciesIcons };
+export { Species };

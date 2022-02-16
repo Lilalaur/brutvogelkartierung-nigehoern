@@ -1,9 +1,16 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "noLib": false,
+    "noEmit": true,
+    "checkJs": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["*"]
     }
   },
-  "exclude": ["node_modules", "dist", ".parcel-cache"]
+  "exclude": ["node_modules", "dist", ".parcel-cache", ".github"]
 }

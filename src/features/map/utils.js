@@ -1,28 +1,41 @@
-import { SPECIES } from "./Signaturen";
-import { SpeciesIcons } from "./constants";
+import * as L from "leaflet";
+import { Species, SpeciesIcons } from "./constants";
 
-/** Dynamically loading/importing the GeoJSON data from its static file */
-const loadGeoJSONData = async () => {
-  const data = await import("@/assets/BK_NG_Gesamt.json");
-  return data;
-};
+function createHTMLSpeciesMarker(acronym) {
+  const trimmedAcronym = acronym.trim();
+  const element = L.DomUtil.create(
+    "div",
+    `marker-icon marker-icon--${trimmedAcronym}`
+  );
+  element.insertAdjacentHTML("afterbegin", getSpeciesIcon(trimmedAcronym));
+  element.style.setProperty(
+    "--color-marker-icon",
+    getSpeciesColor(trimmedAcronym)
+  );
+  return element;
+}
 
-const getAvailableYears = (data) => {
+function filterAvailableYears(data) {
   const availableYears = new Set();
   data?.features.forEach(({ properties }) => {
     availableYears.add(Number(properties.Jahr));
   });
   return availableYears;
-};
+}
 
-const getSpeciesColor = (acronym) => {
-  const color = SPECIES[acronym]?.color ?? "gray";
+function getSpeciesColor(acronym) {
+  const color = Species[acronym]?.color ?? "gray";
   return color;
-};
+}
 
-const getSpeciesIcon = (acronym) => {
-  const icon = SPECIES[acronym]?.icon ?? SpeciesIcons.Circle;
+function getSpeciesIcon(acronym) {
+  const icon = Species[acronym]?.icon ?? SpeciesIcons.Circle;
   return icon;
-};
+}
 
-export { loadGeoJSONData, getAvailableYears, getSpeciesColor, getSpeciesIcon };
+export {
+  filterAvailableYears,
+  getSpeciesColor,
+  getSpeciesIcon,
+  createHTMLSpeciesMarker,
+};

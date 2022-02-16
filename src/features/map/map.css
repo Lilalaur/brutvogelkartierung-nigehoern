@@ -3,3 +3,22 @@
   z-index: 1;
   height: 95vh;
 }
+
+.marker-icon-wrapper {
+  display: flex;
+}
+
+.marker-icon {
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.marker-icon > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: var(--color-marker-icon);
+  fill-opacity: 0.3;
+  stroke: var(--color-marker-icon);
+  stroke-opacity: 1;
+}

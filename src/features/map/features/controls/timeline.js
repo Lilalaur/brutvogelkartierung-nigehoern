@@ -1,7 +1,10 @@
 import * as L from "leaflet";
-import { store } from "../store";
+import { store, setYear } from "../../store";
 import "./timeline.css";
 
+/**
+ * @param {import('leaflet').Map} map
+ */
 function registerTimelineControl(map) {
   const timeline = createTimelineControl();
   timeline.setPosition("bottomright");
@@ -9,17 +12,9 @@ function registerTimelineControl(map) {
 }
 
 function createTimelineControl() {
-  const timeline = L.control();
+  const timeline = new L.Control();
   timeline.onAdd = createTimelineElement;
   return timeline;
-}
-
-function isEven(num) {
-  return num % 2 === 0;
-}
-
-function isOdd(num) {
-  return num % 2 !== 0;
 }
 
 function createTimelineElement() {
@@ -30,47 +25,46 @@ function createTimelineElement() {
   const min = Math.min(...state.years);
   const max = Math.max(...state.years);
   inputElement.setAttribute("type", "range");
-  inputElement.setAttribute("min", min);
-  inputElement.setAttribute("max", max);
+  inputElement.setAttribute("min", `${min}`);
+  inputElement.setAttribute("max", `${max}`);
   inputElement.setAttribute("step", "1");
   inputElement.setAttribute("value", state.year);
-  inputElement.setAttribute("list", "testId");
+  inputElement.setAttribute("list", "timelineYears");
 
   const datalistElement = L.DomUtil.create(
     "datalist",
     undefined,
     containerElement
   );
-  // const datalistElement = document.createElement('datalist');
-  datalistElement.setAttribute("id", "testId");
+  datalistElement.setAttribute("id", "timelineYears");
 
-  for (let i = min; i <= max; i++) {
+  for (let year = min; year <= max; year++) {
     const optionElement = L.DomUtil.create(
       "option",
       undefined,
       datalistElement
     );
-    // const optionElement = document.createElement("option");
-    optionElement.setAttribute("value", i);
+    optionElement.setAttribute("value", `${year}`);
 
-    if (i === min || i === max || i % 5 === 0) {
-      optionElement.setAttribute("label", i);
+    if (year === min || year === max || year % 5 === 0) {
+      optionElement.setAttribute("label", `${year}`);
     }
 
     datalistElement.appendChild(optionElement);
+  }
+
+  /**
+   * @param {Event & { target: HTMLInputElement }} event
+   */
+  function handleRangeInputChange({ target }) {
+    const selectedYear = Number(target.value);
+    store.dispatch(setYear(selectedYear));
   }
 
   L.DomEvent.on(inputElement, "input", handleRangeInputChange);
   L.DomEvent.disableClickPropagation(containerElement);
 
   return containerElement;
-}
-
-function handleRangeInputChange({ target }) {
-  const state = store.getState();
-  const selectedYear = Number(target.value);
-
-  state.year = selectedYear;
 }
 
 export { registerTimelineControl };
