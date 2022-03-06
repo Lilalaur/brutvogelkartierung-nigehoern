@@ -24,7 +24,7 @@
 }
 
 .timeline option {
-  flex: 0 0 3em;
+  flex: 0 1 3em;
   text-align: center;
   font-family: monospace;
   font-variant-numeric: tabular-nums;

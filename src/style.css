@@ -19,6 +19,7 @@ body {
   width: 100vw;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
+  background-color: white;
 }
 
 /* TODO: Remove me */
@@ -45,12 +46,17 @@ h3 {
   font-weight: bold;
 }
 
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  height: 5vh;
+  padding: 0 10px;
+  flex: 0 1 auto;
 }
 
 .header__text,
@@ -59,4 +65,8 @@ h3 {
   font-weight: normal;
   font-variant-numeric: tabular-nums;
   font-family: monospace;
+}
+
+.header__text {
+  margin: 0;
 }
