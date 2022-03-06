@@ -1,5 +1,5 @@
 import { registerTileLayer } from "./tileLayer";
-import { registerGeoJSONLayer } from "./geoJsonLayer";
+import { registerGeoJSONLayer } from "./geoJSONLayer";
 
 /**
  * @param {import('leaflet').Map} map
